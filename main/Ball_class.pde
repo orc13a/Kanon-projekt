@@ -11,6 +11,6 @@ class Ball extends Component {
   }
   
   void update() {
-    
+    location.add(velocity);
   }
 }

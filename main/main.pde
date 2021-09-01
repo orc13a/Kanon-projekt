@@ -17,4 +17,11 @@ void draw() {
   background(255);
   
   canon.display();
+  canon.aim();
+}
+
+void keyPressed() {
+  if (key == ' ') {
+    canon.fire();
+  }
 }
