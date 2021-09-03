@@ -2,6 +2,7 @@
 // Gustav og Oliver C | DDU 2 - HCØL
 // ----------------------------------------
 
+PImage backgroundImg;
 Canon canon;
 
 void setup() {
@@ -10,12 +11,15 @@ void setup() {
   // pixelDensity(2);
   imageMode(CENTER);
   
+  backgroundImg = loadImage("FantasyKanonbackground.jpg");
+  
   canon = new Canon();
 }
 
 void draw() {
   clear();
   background(255);
+  image(backgroundImg, (width / 2), (height / 2));
   
   canon.display();
   canon.aim();

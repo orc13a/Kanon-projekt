@@ -83,8 +83,8 @@ class Canon extends Component {
     Ball newBall = new Ball();
     newBall.location.x = 200;
     newBall.location.y = 600;
-    newBall.w = 20;
-    newBall.h = 20;
+    newBall.w = 30;
+    newBall.h = 30;
     
     allBalls.add(newBall);
     ballLoaded = allBalls.get(allBalls.size() - 1);
