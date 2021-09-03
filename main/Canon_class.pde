@@ -8,6 +8,12 @@ class Canon extends Component {
   
   Canon() {
     newBall();
+    
+    x = 200;
+    y = 600;
+    
+    img = loadImage("Shotgunpepe.PNG");
+    img.resize(200, 100);
   }
   
   void display() {
@@ -22,6 +28,11 @@ class Canon extends Component {
     //line(ballLoaded.location.x, ballLoaded.location.y, mouseX, mouseY);
     //line(ballLoaded.location.x, ballLoaded.location.y, mouseX, ballLoaded.location.y);
     //line(ballLoaded.location.x, ballLoaded.location.y, ballLoaded.location.x, mouseY);
+    
+    //translate(x - 20, y - 30);
+    //rotate(radians(45));
+    image(img, 0, 0);
+    //translate(0, 0);
   }
   
   void fire() {
