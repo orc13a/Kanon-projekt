@@ -3,11 +3,13 @@ class Ball extends Component {
   
   Ball() {
     mass = 20;
+    img = loadImage("canonBall.png");
   }
   
   void display() {
-    fill(bColor);
-    ellipse(location.x, location.y, w, h);
+    //fill(bColor);
+    //ellipse(location.x, location.y, w, h);
+    image(img, location.x, location.y, w, h);
   }
   
   void applyForce(PVector force) {

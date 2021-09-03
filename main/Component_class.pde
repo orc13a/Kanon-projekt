@@ -10,6 +10,7 @@ class Component {
   PVector gravity;
   PVector friction;
   boolean fired = false;
+  PImage img;
   
   Component() {
     location = new PVector();
