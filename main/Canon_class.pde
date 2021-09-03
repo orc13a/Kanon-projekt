@@ -1,16 +1,17 @@
 class Canon extends Component {
-  ArrayList<Ball> allBalls = new ArrayList<Ball>();
-  float mouseDist = 0;
-  Ball ballLoaded;
-  float alphaV = 0;
-  float hozLine = 0;
-  float verLine = 0;
+  ArrayList<Ball> allBalls = new ArrayList<Ball>(); // All kugler
+  float mouseDist = 0; // Afstenden mellem musen og kuglen (ønskede kraft)
+  Ball ballLoaded; // Den kugle som er i kanonen
+  float alphaV = 0; // Ønskede vinkel
+  float hozLine = 0; // Den vandrette side i trekanten til at udregne vinkel
+  float verLine = 0; // Den lodrette side i trekanten til at udregne vinkel
   
   Canon() {
     newBall();
   }
   
   void display() {
+    // Tegn alle kugler
     for (Ball b : allBalls) {
       b.display();
       b.update();
@@ -24,18 +25,20 @@ class Canon extends Component {
   }
   
   void fire() {
-    ballLoaded.velocity.x = (hozLine / 10) * (mouseDist / 100);
-    ballLoaded.velocity.y = (verLine / 10) * (-mouseDist / 100);
+    ballLoaded.velocity.x = (hozLine / 10) * (mouseDist / 100); // Giv kuglen den rigtige vinkel med kraf på x-aksen
+    ballLoaded.velocity.y = (verLine / 10) * (-mouseDist / 100); // Giv kuglen den rigtige vinkel med kraf på y-aksen
     
     newBall();
   }
   
   void aim() {
+    // Udregn
     mouseDist = dist(ballLoaded.location.x, ballLoaded.location.y, mouseX, mouseY);
     hozLine = dist(ballLoaded.location.x, ballLoaded.location.y, mouseX, ballLoaded.location.y);
     verLine = dist(ballLoaded.location.x, ballLoaded.location.y, ballLoaded.location.x, mouseY);
   }
   
+  // Til at lave en nu kugle som sidder i kanonen.
   void newBall() {
     Ball newBall = new Ball();
     newBall.location.x = 200;
