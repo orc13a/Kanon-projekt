@@ -31,7 +31,8 @@ class Canon extends Component {
     
     //translate(x - 20, y - 30);
     //rotate(radians(45));
-    image(img, 0, 0);
+    //image(img, 0, 0);
+    image(img, x - 20, y - 30);
     //translate(0, 0);
   }
   
