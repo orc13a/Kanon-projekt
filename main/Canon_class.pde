@@ -1,6 +1,7 @@
 class Canon extends Component {
   ArrayList<Ball> allBalls = new ArrayList<Ball>(); // All kugler
   float firePower = 0; // Afstenden mellem musen og kuglen (ønskede kraft)
+  float mouseDist = 0;
   Ball ballLoaded; // Den kugle som er i kanonen
   float alphaV = 0; // Ønskede vinkel
   float hozLine = 0; // Den vandrette side i trekanten til at udregne vinkel
@@ -26,17 +27,16 @@ class Canon extends Component {
       b.display();
     }
     
-    alphaV = degrees(asin(verLine / firePower)); // Udregning af vinkel a
-    text(firePower, 100, 100);
+    //stroke(0);
     //line(ballLoaded.location.x, ballLoaded.location.y, mouseX, mouseY);
     //line(ballLoaded.location.x, ballLoaded.location.y, mouseX, ballLoaded.location.y);
     //line(ballLoaded.location.x, ballLoaded.location.y, ballLoaded.location.x, mouseY);
     
-    //translate(x - 20, y - 30);
-    //rotate(radians(45));
-    //image(img, 0, 0);
-    image(img, x - 20, y - 30);
-    //translate(0, 0);
+    pushMatrix();
+    translate(x - 20, y - 30);
+    rotate(-radians(alphaV));
+    image(img, 0, 0);
+    popMatrix();
   }
   
   void fire() {
@@ -53,10 +53,13 @@ class Canon extends Component {
   void aim() {
     if (aimCheck() == true) {
       // Udregn
-      getFirePower();
+      mouseDist = dist(ballLoaded.location.x, ballLoaded.location.y, mouseX, mouseY);
       hozLine = dist(ballLoaded.location.x, ballLoaded.location.y, mouseX, ballLoaded.location.y);
       verLine = dist(ballLoaded.location.x, ballLoaded.location.y, ballLoaded.location.x, mouseY);
       
+      getFirePower();
+      
+      alphaV = degrees(asin(verLine / mouseDist)); // Udregning af vinkel a
       // line(ballLoaded.location.x, ballLoaded.location.y, mouseX, mouseY);
       aimLine();
     }
@@ -91,9 +94,7 @@ class Canon extends Component {
     }
   }
   
-  void getFirePower() {
-    float mouseDist = dist(ballLoaded.location.x, ballLoaded.location.y, mouseX, mouseY);
-    
+  void getFirePower() {   
     if (mouseDist < 200) {
       firePower = 0.5;
     }
