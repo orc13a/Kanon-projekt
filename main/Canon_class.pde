@@ -5,6 +5,7 @@ class Canon extends Component {
   float alphaV = 0; // Ønskede vinkel
   float hozLine = 0; // Den vandrette side i trekanten til at udregne vinkel
   float verLine = 0; // Den lodrette side i trekanten til at udregne vinkel
+  Ball HiddenBall;
   
   Canon() {
     newBall();
@@ -14,6 +15,8 @@ class Canon extends Component {
     
     img = loadImage("Shotgunpepe.PNG");
     img.resize(200, 100);
+    
+    HiddenBall = new Ball();
   }
   
   void display() {
@@ -54,7 +57,29 @@ class Canon extends Component {
       hozLine = dist(ballLoaded.location.x, ballLoaded.location.y, mouseX, ballLoaded.location.y);
       verLine = dist(ballLoaded.location.x, ballLoaded.location.y, ballLoaded.location.x, mouseY);
       
-      line(ballLoaded.location.x, ballLoaded.location.y, mouseX, mouseY);
+      // line(ballLoaded.location.x, ballLoaded.location.y, mouseX, mouseY);
+      aimLine();
+    }
+  }
+  
+  void aimLine() {
+    HiddenBall.location.x = 200;
+    HiddenBall.location.y = 600;
+    
+    getFirePower();
+    HiddenBall.velocity.x = (hozLine / 35) * firePower; // Giv kuglen den rigtige vinkel med kraf på x-aksen
+    HiddenBall.velocity.y = (verLine / 35) * -firePower; // Giv kuglen den rigtige vinkel med kraf på y-aksen
+      
+    HiddenBall.fired = true;
+    
+    for (int i = 1; i < 50; i++) {
+      HiddenBall.update();
+      
+      if (i % 5 == 0) {
+        noStroke();
+        fill(255);
+        ellipse(HiddenBall.location.x, HiddenBall.location.y, 12, 12);
+      }
     }
   }
   
