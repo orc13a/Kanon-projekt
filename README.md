@@ -17,7 +17,8 @@ Når du vil skude med kanonen skal du trykke på tasten `Mellem`.
 
 
 ### Lavede i noget om i planen?
-
+Der blev ikke ændret på nogle deadlines, i løbet af projektet, alle deadlines blev opfyldt. Nogle hurtigere end forventet.
+Derudover så blev der valgt at en ligegyldig task skulle fjernes fra iteration 5, hvilket gjorde den mindre tidskrævende. 
 
 ### Holdt jeres tidsestimater?
 Vores Iteraionsliste, blev fulgt nøje i starten, dog efter blot anden dag (d.3/09) var vi forud for vores plan. Vi endte med at arbejde meget mere effektivt end forventet,
