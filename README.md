@@ -20,7 +20,7 @@ var korrekte, og dermed finde fejl.
 Noget andet vi fandt ud af var at de fleste der prøvede programmet troede fra starten at man skulle skyde ved at klikke med musen.
 
 ### Hvad aftalte i med vejleder?
-
+Vi afltalte ikke noget med nogen af vejlederne eller fik nogen hjælp...
 
 ### Lavede i noget om i planen?
 Der blev ikke ændret på nogle deadlines, i løbet af projektet, alle deadlines blev opfyldt. Nogle hurtigere end forventet.
@@ -41,3 +41,5 @@ Inde på GitHub har vi lavet `isusse`, `milestones` og et `projekt`. Der kan ses
 Vi har også en Wiki som indenholder ting var vores report.
 
 ## Video af produkt 
+Detter er en GIF af vores produkt, en video af det samme findes i: `/Billedertilwiki/DDU_kanon-projekt-produkt-video.mov`.
+[GIF af vores produkt](https://raw.githubusercontent.com/orc13a/Kanon-projekt/main/Billedertilwiki/produkt-GIF.gif "GIF der viser hvordan vores produkt virker")
