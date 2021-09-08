@@ -20,7 +20,10 @@ Når du vil skude med kanonen skal du trykke på tasten `Mellem`.
 
 
 ### Holdt jeres tidsestimater?
-
+Vores Iteraionsliste, blev fulgt nøje i starten, dog efter blot anden dag (d.3/09) var vi forud for vores plan. Vi endte med at arbejde meget mere effektivt end forventet,
+og derfor endte vi med at være en hel iteration foran det planlagte, derfra og til slutningen. Det vil sige at Iteration 1, blev afsluttet som planlagt den 1/09, 
+iteration 2 blev afsluttet den 3/09, dog så blev iteration 3 også afsluttet den 3/09, frem for den 7/09. Iteration 4 og 5, som ikke havde stor prioritet,
+og ikke var tidskrævende, blev færdiggjort den 7/09.
 
 ## Fordeling
 Hvis man kigger på statestatikker om hvem der har pushed mest kode, så står jeg som den der har lavet det hele.
