@@ -11,7 +11,13 @@ Når du vil skude med kanonen skal du trykke på tasten `Mellem`.
 
 ## DOKUMENTER JERES ITERATIONS AFSLUTNINGER
 ### Hvordan gik eventuel test?
+Vi har benyttet os en del af stepwise improvement, hvor vi konstant tester vores program mens vi er ved at lave det. 
+Det gjorde processen en smule lettere idet vi var istand til at finde små fejl hurtigt, og sikre os at den matematiske del
+af programmet var beregnet korrekt. Vi fik alle de benyttede tal til at blive vist visuelt i programmet, så vi kunne udføre
+vores egne beregninger på siden, samtidigt med at vi fik programmets, efter sammenligning kunne vi så se om resultaterne 
+var korrekte, og dermed finde fejl.
 
+Noget andet vi fandt ud af var at de fleste der prøvede programmet troede fra starten at man skulle skyde ved at klikke med musen.
 
 ### Hvad aftalte i med vejleder?
 
