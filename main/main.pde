@@ -26,6 +26,7 @@ void draw() {
 }
 
 void keyPressed() {
+  // Når mellemrum trykkes skyder kanonen
   if (key == ' ') {
     canon.fire();
   }

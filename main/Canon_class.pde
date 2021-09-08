@@ -1,12 +1,12 @@
 class Canon extends Component {
   ArrayList<Ball> allBalls = new ArrayList<Ball>(); // All kugler
-  float firePower = 0; // Afstenden mellem musen og kuglen (ønskede kraft)
-  float mouseDist = 0;
+  float firePower = 0; // Udregnede kraft til kuglen
+  float mouseDist = 0; // Afstenden mellem musen og kuglen (ønskede kraft)
   Ball ballLoaded; // Den kugle som er i kanonen
   float alphaV = 0; // Ønskede vinkel
   float hozLine = 0; // Den vandrette side i trekanten til at udregne vinkel
   float verLine = 0; // Den lodrette side i trekanten til at udregne vinkel
-  Ball HiddenBall;
+  Ball HiddenBall; // En usynlig bold til at udregne kuglernes flyve bane
   
   Canon() {
     newBall();
@@ -27,11 +27,7 @@ class Canon extends Component {
       b.display();
     }
     
-    //stroke(0);
-    //line(ballLoaded.location.x, ballLoaded.location.y, mouseX, mouseY);
-    //line(ballLoaded.location.x, ballLoaded.location.y, mouseX, ballLoaded.location.y);
-    //line(ballLoaded.location.x, ballLoaded.location.y, ballLoaded.location.x, mouseY);
-    
+    // Placer kanon billede og få det til at dreje med musen
     pushMatrix();
     translate(x - 20, y - 30);
     rotate(-radians(alphaV));
@@ -41,15 +37,17 @@ class Canon extends Component {
   
   void fire() {
     if (aimCheck() == true) {
+      // Her der udregner vi vinklen og ganger med kraften kuglen vil blive skud afsted med
       ballLoaded.velocity.x = (hozLine / 35) * firePower; // Giv kuglen den rigtige vinkel med kraf på x-aksen
       ballLoaded.velocity.y = (verLine / 35) * -firePower; // Giv kuglen den rigtige vinkel med kraf på y-aksen
       
       ballLoaded.fired = true;
       
-      newBall();
+      newBall(); // Sæt ny kugle i kanonen
     }
   }
   
+  // Metoden udregner vinklen og afstanden mellem musen
   void aim() {
     if (aimCheck() == true) {
       // Udregn
@@ -65,11 +63,13 @@ class Canon extends Component {
     }
   }
   
+  // Metode til at tegne de punkter som viser kuglens bane inden den bliver affyrret
   void aimLine() {
+    // Sæt bolden i kanonen
     HiddenBall.location.x = 200;
     HiddenBall.location.y = 600;
     
-    getFirePower();
+    getFirePower(); // Find styken af skudet
     HiddenBall.velocity.x = (hozLine / 35) * firePower; // Giv kuglen den rigtige vinkel med kraf på x-aksen
     HiddenBall.velocity.y = (verLine / 35) * -firePower; // Giv kuglen den rigtige vinkel med kraf på y-aksen
       
@@ -78,6 +78,7 @@ class Canon extends Component {
     for (int i = 1; i < 50; i++) {
       HiddenBall.update();
       
+      // Tegn punkterne
       if (i % 5 == 0) {
         noStroke();
         fill(255);
@@ -86,6 +87,7 @@ class Canon extends Component {
     }
   }
   
+  // Metode til at tjekke om musen er inde for området man må sigte i
   boolean aimCheck() {
     if (mouseX > ballLoaded.location.x && mouseY < ballLoaded.location.y) {
       return true;
@@ -94,6 +96,7 @@ class Canon extends Component {
     }
   }
   
+  // Sætter firePower til en værdi alt efter hvilken zone musen er i
   void getFirePower() {   
     if (mouseDist < 200) {
       firePower = 0.5;

@@ -7,16 +7,16 @@ class Ball extends Component {
   }
   
   void display() {
-    //fill(bColor);
-    //ellipse(location.x, location.y, w, h);
     image(img, location.x, location.y, w, h);
   }
   
+  // Metode til at tilføje en ønsked kraft på kuglen
   void applyForce(PVector force) {
     force.div(mass);
     acceleration.add(force);
   }
   
+  // Metode til at tilføje tyngdekraft på kuglen
   void applyGravity(PVector g) {
     PVector newGravity;
     newGravity = g.copy();
@@ -24,6 +24,7 @@ class Ball extends Component {
     acceleration.add(newGravity);
   }
   
+  // Metode til at finde friktionen, altså hvordan kuglen skal reagere med jorden
   void getFriction() {
     friction = velocity.get();
     friction.mult(-1);
@@ -31,6 +32,7 @@ class Ball extends Component {
     friction.mult(mass);
   }
   
+  // Metode til at se om kuglen rammer jorden
   void checkGround() {
     if (location.y >= height - (w / 2)) {
       velocity.y *= -1;
@@ -39,7 +41,9 @@ class Ball extends Component {
     }
   }
   
+  // Metode der opdatere alle kuglens værdier
   void update() {
+    // Kun tilføje disse kræfter når kuglen er blevet skudt afsted
     if (fired == true) {
       applyForce(friction);
       applyGravity(gravity);
