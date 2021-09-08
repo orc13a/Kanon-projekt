@@ -1,4 +1,7 @@
 # Kanon-projekt
+## Aflevering
+Vores aflevering med applikationen + vores report ligger under `Releases` her i denne repo. Du finder `Releases` [her](https://github.com/orc13a/Kanon-projekt/releases).
+
 ## Hvordan spiller man?
 - Musen
 Musen er til at styre vinklen på kanonen. Vinklen kan være mellem 0 - 90 grader.
