@@ -41,6 +41,8 @@ Inde på GitHub har vi lavet `isusse`, `milestones` og et `projekt`. Der kan ses
 Vi har også en Wiki som indenholder ting var vores report.
 
 ## Video af produkt 
-Detter er en GIF af vores produkt, en video af det samme findes i: `/Billedertilwiki/DDU_kanon-projekt-produkt-video.mov`.
+Detter er en GIF af vores produkt, en video af det samme findes i:
+
+`/Billedertilwiki/DDU_kanon-projekt-produkt-video.mov`.
 
 ![](https://github.com/orc13a/Kanon-projekt/blob/c94fa5a6d030e7a33c0a77370d964d29dfd261ff/Billedertilwiki/produkt-GIF.gif)
