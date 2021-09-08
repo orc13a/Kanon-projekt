@@ -12,3 +12,4 @@ Gustav og mig (Oliver C) har siddet sammen og lave på koden sammen på min comp
 
 ## GitHub
 Inde på GitHub har vi lavet `isusse`, `milestones` og et `projekt`. Der kan ses hvad vi har lavet og hvor langt vi er kommet osv.
+Vi har også en Wiki som indenholder ting var vores report.
