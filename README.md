@@ -36,8 +36,8 @@ og ikke var tidskrævende, blev færdiggjort den 7/09.
 ![](https://github.com/orc13a/Kanon-projekt/blob/dbcd5e2f4863e17f33cb70df96863a321dd5a29e/Billedertilwiki/burn_down_cart-DDU-projektstyring-aflevering.png)
 
 ## Fordeling
-Hvis man kigger på statestatikker om hvem der har pushed mest kode, så står jeg som den der har lavet det hele.
-Gustav og mig (Oliver C) har siddet sammen og lave på koden sammen på min computer og derfor står jeg som den der har skrevet alt koden.
+Hvis man kigger på statestatikker om hvem der har pushed mest kode, så står jeg (Oliver C) som den der har lavet det hele.
+Gustav og mig (Oliver C) har siddet sammen og lave på koden sammen på min (Oliver C) computer og derfor står jeg som den der har skrevet alt koden.
 
 ## GitHub
 Inde på GitHub har vi lavet `isusse`, `milestones` og et `projekt`. Der kan ses hvad vi har lavet og hvor langt vi er kommet osv.
