@@ -33,7 +33,7 @@ iteration 2 blev afsluttet den 3/09, dog så blev iteration 3 også afsluttet de
 og ikke var tidskrævende, blev færdiggjort den 7/09.
 
 ## Burndown cart
-![](https://github.com/orc13a/Kanon-projekt/blob/4b905cb977348a8b89413c9d8f7697a2a9de5291/Billedertilwiki/burn_down_cart-DDU-projektstyring-aflevering.png)
+![](https://github.com/orc13a/Kanon-projekt/blob/dbcd5e2f4863e17f33cb70df96863a321dd5a29e/Billedertilwiki/burn_down_cart-DDU-projektstyring-aflevering.png)
 
 ## Fordeling
 Hvis man kigger på statestatikker om hvem der har pushed mest kode, så står jeg som den der har lavet det hele.
